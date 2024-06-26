@@ -1,0 +1,29 @@
+#container{
+    width: 99vw;
+    height: 95vh;
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: center;
+}
+#container h1{
+    text-align: center;
+    color: white;
+}
+
+#labels{
+    width: 50%;
+    padding-top: 50px;
+}
+
+input,textarea{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+label{
+    color: white;
+}

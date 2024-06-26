@@ -1,0 +1,38 @@
+#container{
+    width: 100vw;
+    height: 94.2vh;
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    justify-content: center;
+}
+
+span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card{
+    background-color: rgb(29, 29, 31);
+    color: white;
+    margin-top: 50px;
+    height: 50%;
+    width: 30%;
+    font-size: 25px;
+}
+
+h5{
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+p{
+    margin-bottom: 50px;
+}
+
+a{
+    margin-left: 10px;
+}
+
+.card-body{
+    margin-top: 80px;
+}

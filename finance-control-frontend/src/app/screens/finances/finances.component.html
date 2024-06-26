@@ -1,0 +1,14 @@
+<div id="container">
+  <div id="labels">
+    <h1>Finance activity</h1>
+    <form (ngSubmit)="saveInfos()">
+      <label for="activity">Activity:</label>
+      <input type="text" class="form-control" placeholder="Activity" id="activity" name="activity" [(ngModel)]="transaction.activity" required>
+      <label for="value">Value:</label>
+      <input type="number" class="form-control" placeholder="Value" id="value" name="value" [(ngModel)]="transaction.amount" required>
+      <label for="description">Data:</label>
+      <input type="date" class="form-control" aria-label="Amount (to the nearest dollar)" id="data" name="data" [(ngModel)]="transaction.data">
+      <button class="btn btn-success" type="submit">Save</button>
+    </form>
+  </div>
+</div>

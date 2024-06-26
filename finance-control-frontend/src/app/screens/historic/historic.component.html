@@ -1,0 +1,18 @@
+<div id="container">
+    <table class="table table-dark" >
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Value</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let finance of financeService.financeHistoric">
+            <td>{{finance.activity}}</td>
+            <td>{{finance.amount}}</td>
+            <td>{{finance.data}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
