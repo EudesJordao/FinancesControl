@@ -1,18 +1,40 @@
-#container{
+#container {
     width: 99vw;
     height: 95vh;
+    max-height: 95vh;
     background-color: rgb(71, 71, 71);
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-.table{
-    margin-top: 40px;
-    width: 60%;
-    height: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .table {
+    margin-top: 20px;
+    width: 100%;
     text-align: center;
-}
+    overflow-x: auto;
+  }
+  
+  .mat-paginator {
+    margin-top: 20px;
+  }
+  
+  .mat-paginator-range-label,
+  .mat-paginator-page-size,
+  .mat-paginator-page-size-label {
+    color: white; 
+  }
 
-label{
-    color: white;
-}
+  .first{
+    width: 50%;
+  }
+
+  .second{
+    width: 5%;
+    height: 3%;
+    text-align: center;
+  }
+  

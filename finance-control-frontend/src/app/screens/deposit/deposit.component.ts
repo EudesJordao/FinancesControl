@@ -16,6 +16,16 @@ export class DepositComponent {
 
   saveDeposit(): void {
 
+    if (this.transaction.amount === 0 || 
+        this.transaction.amount < 0 || 
+        !this.transaction.activity || 
+        this.transaction.activity.trim() === "" || 
+        !this.transaction.amount
+      )  {
+      alert("Fill in all fields correct");
+      return;
+    }
+
     this.financeService.addDeposit(this.transaction);
     this.transaction = {activity: 'Deposit', amount: 0, data: '', type:'deposit'};
   }

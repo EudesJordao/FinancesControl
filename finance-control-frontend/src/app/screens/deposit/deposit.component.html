@@ -3,9 +3,9 @@
       <h1>Deposit</h1>
       <form (ngSubmit)="saveDeposit()">
           <label for="value">Value:</label>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Value" id="value" name="value" [(ngModel)]="transaction.amount"> 
+          <input type="number" class="form-control" placeholder="Value" id="value" name="value" [(ngModel)]="transaction.amount" required>
           <label for="description">Data:</label>
-          <input type="date" class="form-control" aria-label="Amount (to the nearest dollar)" id="data" name="data" [(ngModel)]="transaction.data">
+          <input type="date" class="form-control" aria-label="Amount (to the nearest dollar)" id="data" name="data" [(ngModel)]="transaction.data" required>
         <button class="btn btn-success" type="submit">Save</button>
 
       </form>

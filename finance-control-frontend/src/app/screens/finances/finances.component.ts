@@ -15,13 +15,15 @@ export class FinancesComponent {
 
 
   saveInfos(): void {
-    if (this.transaction.activity === "" || this.transaction.amount === 0) {
-      alert("Fill in all fields");
+    if (!this.transaction.activity ||
+        this.transaction.activity.trim() === "" ||
+        this.transaction.amount === 0 ||
+        this.transaction.amount < 0 ||
+        this.transaction.data === "" ||
+        !this.transaction.amount
+      ) {
+      alert("Fill in all fields correct");
       return;
-    }
-
-    if (this.financeService.balance < this.transaction.amount) {
-      alert("Your account is negative!");
     }
 
     this.financeService.addTransaction(this.transaction);

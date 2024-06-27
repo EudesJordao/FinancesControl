@@ -1,18 +1,28 @@
 <div id="container">
-    <table class="table table-dark" >
-        <thead>
-          <tr>
-            <th scope="col">Activity</th>
-            <th scope="col">Value</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let finance of financeService.financeHistoric">
-            <td>{{finance.activity}}</td>
-            <td>{{finance.amount}}</td>
-            <td>{{finance.data}}</td>
-          </tr>
-        </tbody>
-      </table>
+  <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterFinances()" class="form-control first" aria-label="Large" aria-describedby="inputGroup-sizing-sm"/>
+  
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Activity</th>
+        <th scope="col">Value</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let finance of paginatedFinances">
+        <td>{{finance.activity}}</td>
+        <td>{{finance.amount}}</td>
+        <td>{{finance.data}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <label for="pageSize">Items per page:</label>
+  <input type="number" id="pageSize" name="pageSize" [(ngModel)]="pageSize" (change)="updatePagedHistoric()" class="form-control second" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+
+  <mat-paginator [length]="filteredFinances.length"
+                 [pageSize]="pageSize"
+                 (page)="handlePageEvent($event)">
+  </mat-paginator>
 </div>
